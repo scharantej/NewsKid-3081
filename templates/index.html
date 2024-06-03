@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kids' Newsfeed</title>
+</head>
+<body>
+<h1>Kids' Newsfeed</h1>
+<ul>
+{% for news_item in news_items %}
+<li>
+<a href="{{ url_for('news_item_detail', id=news_item['id']) }}">
+{{ news_item['title'] }}
+</a>
+<br>
+{{ news_item['date'] }}
+</li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
